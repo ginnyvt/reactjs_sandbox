@@ -5,4 +5,4 @@ This project was bootstrapped with
 
 ## Screenshot
 
-![1_task screenshot] (1_boxes/screen-shots/boxes-example.png)
+![1_task screenshot](1_boxes/screen-shots/boxes-example.png)
