@@ -1,0 +1,47 @@
+.animal-list {
+	display: grid;
+	grid-gap: 2rem;
+	padding: 5rem;
+}
+
+.img-container {
+	transition: ease 500ms;
+}
+.img-container:hover {
+	outline: 3px solid rgb(48, 165, 211);
+	outline-offset: -8px;
+}
+.animal p {
+	text-transform: uppercase;
+	margin-top: 2rem;
+	letter-spacing: 2px;
+	font-weight: 700;
+	color: rgb(60, 119, 143);
+}
+
+.btn {
+	margin-top: 1.5rem;
+	display: inline-block;
+	padding: 0.5rem 1.8rem;
+	background-color: lightblue;
+	font-size: 1.1rem;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	color: rgb(48, 165, 211);
+}
+@media screen and (min-width: 600px) {
+	.animal-list {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media screen and (min-width: 900px) {
+	.animal-list {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.animal-list {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
