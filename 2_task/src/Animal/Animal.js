@@ -4,6 +4,7 @@ const Animal = (props) => {
 	const showAlert = () => {
 		alert(`Hello, I am ${props.name}. It is nice to meeet you!`);
 	};
+
 	return (
 		<article className='animal'>
 			<div className='img-container'>
