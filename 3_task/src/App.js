@@ -1,18 +1,21 @@
-import './App.css';
 import React, { Component } from 'react';
+
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+import './App.css';
 
 class App extends Component {
 	state = {
 		likes: 0,
 	};
 
-	increase = () => {
+	increaseHandler = () => {
 		this.setState({
 			likes: this.state.likes + 1,
 		});
 	};
 
-	decrease = () => {
+	decreaseHandler = () => {
 		if (this.state.likes == 0) {
 			return;
 		}
@@ -21,32 +24,35 @@ class App extends Component {
 		});
 	};
 
-	reset = () => {
+	resetHandler = () => {
 		this.setState({
 			likes: 0,
 		});
 	};
 
-	getClasses = (e) => {};
-
 	render() {
 		const isEven = this.state.likes % 2 === 0;
+
 		return (
-			<div
-				style={{ backgroundColor: isEven ? 'red' : 'yellow' }}
-				className={'myClass' + (isEven ? 'even' : 'odd')}
-			>
-				<p>Total likes: {this.state.likes}</p>
-				<button id='increase-btn' onClick={this.increase}>
-					Increase
-				</button>
-				<button id='decrease-btn' onClick={this.decrease}>
-					Decrease
-				</button>
-				<button id='reset-btn' onClick={this.reset}>
-					Reset
-				</button>
-			</div>
+			<>
+				<Header />
+				<main
+					style={{ backgroundColor: isEven ? 'skyblue' : 'lightblue' }}
+					className={'myClass' + (isEven ? 'even' : 'odd')}
+				>
+					<h3>Total likes: {this.state.likes}</h3>
+					<button id='increase-btn' onClick={this.increaseHandler}>
+						Increase
+					</button>
+					<button id='decrease-btn' onClick={this.decreaseHandler}>
+						Decrease
+					</button>
+					<button id='reset-btn' onClick={this.resetHandler}>
+						Reset
+					</button>
+				</main>
+				<Footer />
+			</>
 		);
 	}
 }
